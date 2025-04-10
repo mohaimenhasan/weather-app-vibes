@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0971b7, #006633);
+    background-image: url('https://www.wwe.com/f/styles/talent_champion_xs/public/all/2017/01/John_Cena_protrait--83f7e4c35c1bd973fa1cc01e6a11fe11.png'), linear-gradient(135deg, #0971b7, #006633);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 110% 105%, center;
+    background-size: 350px, cover;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    border: 5px solid #FFD700; /* John Cena's gold color */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cena-logo {
+    background-image: url('https://1000logos.net/wp-content/uploads/2021/04/John-Cena-logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #0971b7; /* John Cena blue */
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0 #FFD700;
+}
+
+.search-container {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+#city-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 3px solid #006633; /* John Cena green */
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#city-input:focus {
+    border-color: #0971b7; /* John Cena blue */
+}
+
+#search-btn {
+    background-color: #006633; /* John Cena green */
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#search-btn:hover {
+    background-color: #0971b7; /* John Cena blue */
+    transform: scale(1.05);
+}
+
+.weather-info {
+    margin-top: 20px;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.weather-details {
+    width: 100%;
+    animation: cenaSalute 1s ease-in-out;
+}
+
+@keyframes cenaSalute {
+    0% { opacity: 0; transform: translateY(30px); }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+#city-name {
+    color: #0971b7; /* John Cena blue */
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.temp-container {
+    margin-bottom: 20px;
+}
+
+#temperature {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #006633; /* John Cena green */
+}
+
+#description {
+    font-size: 20px;
+    color: #333;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.additional-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 18px;
+}
+
+.cena-catchphrase {
+    font-size: 24px;
+    color: #0971b7; /* John Cena blue */
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    padding: 10px;
+    border-top: 2px solid #FFD700;
+    border-bottom: 2px solid #FFD700;
+}
+
+.error {
+    color: #d62828;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.loading {
+    color: #0971b7;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    animation: bounce 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-10px); }
+}
+
+.hidden {
+    display: none;
+}

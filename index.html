@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Cena Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="cena-logo"></div>
+        <h1>Cena Weather</h1>        <div class="search-container">
+            <input type="text" id="city-input" placeholder="You can't see the weather...yet">
+            <button id="search-btn">Show Me Now!</button>
+        </div>
+        <div class="weather-info" id="weather-info">
+            <div class="weather-details hidden" id="weather-details">
+                <h2 id="city-name"></h2>
+                <div class="temp-container">
+                    <p id="temperature"></p>
+                    <p id="description"></p>
+                </div>
+                <div class="additional-info">
+                    <p id="humidity"></p>
+                    <p id="wind-speed"></p>
+                </div>
+                <div class="cena-catchphrase">HUSTLE. LOYALTY. WEATHER.</div>
+            </div>
+            <div id="error-message" class="error hidden"></div>
+            <div id="loading" class="loading hidden">Loading...</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
